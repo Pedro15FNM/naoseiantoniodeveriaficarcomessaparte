@@ -1,12 +1,16 @@
+ATENÇÃO: O nosso programa cria a árvore mapeando dois arquivos csv presentes na pasta 'data', mas o arquivo 'taxa.csv' tem o tamanho maior do que o github aceita, então estamos anexando um link externo para acessar esse arquivo. Para o programa funcionar de maneira completa é necessário baixar ele e colocar na pasta 'data', caso não queira baixar pode usar o parâmetro --fake 1000 ao executar a 'main.py' para simular um cruzamento de dados dos ficheiros e gerar uma árvore falsa.
+
+Link para o arquivo: https://drive.google.com/drive/folders/1xJbYSYOvWb6_E_x2WlgvXXpkQzw0AI4J?usp=drive_link
+
+Esse Link também inclui um vídeo do programa em execução.
+
 ### A APLICAÇÃO
 
 Nosso projeto é um jogo de plataforma 2D com visão lateral, no qual o mapa representa visualmente uma Skip List. Cada nó da estrutura é ilustrado como um prédio vertical, onde a quantidade de níveis do nó determina o número de andares do edifício. O jogador se movimenta entre os prédios utilizando tirolesas, que representam graficamente os ponteiros da Skip List.
 
 A base de dados, contendo os animais e suas categorias, é gerenciada por uma Árvore de Afunilamento (Splay Tree), que possui um nó para cada animal. Já a Skip List possui um nó referente a cada classe taxonômica presente na base (ou seja, cada prédio representa uma classe distinta).
 
-No início de cada rodada, um animal é sorteado da Árvore de Afunilamento e suas informações são exibidas. O objetivo do jogador é alcançar o prédio referente à classe desse animal navegando pelas tirolesas (começando pela cabeça da lista), com cuidado para não esgotar a energia de movimentação( tem uma quantidade limitada de movimentos por rodada). Ao alcançar o objetivo, um novo animal de outra classe é sorteado e o ciclo se repete, iniciando uma nova rodada.
-
-Link para vídeo da aplicação em execução: https://drive.google.com/drive/folders/1xJbYSYOvWb6_E_x2WlgvXXpkQzw0AI4J?usp=drive_link
+No início de cada rodada, um animal é sorteado da Árvore de Afunilamento e suas informações são exibidas. O objetivo do jogador é alcançar o prédio referente à classe desse animal navegando pelas tirolesas (começando pela cabeça da lista), com cuidado para não esgotar a energia de movimentação(tem uma quantidade limitada de movimentos por rodada, se gastar toda a energia perde a rodada), e com cuidado para não ultrapassar o prédio da classse alvo(se ultrapassar perde o jogo). Ao alcançar o objetivo, um novo animal de outra classe é sorteado e o ciclo se repete, iniciando uma nova rodada.
 
 ### PROCESSO DE DESENVOLVIMENTO
 
