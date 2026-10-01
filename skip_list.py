@@ -55,7 +55,7 @@ class ScenarioSkipList:
         for i, animal_class in enumerate(sorted_classes, start=1):
             node = BuildingNode(
                 i,
-                f"Prédio {i}",
+                animal_class,
                 animal_class,
                 self._random_level(),
             )
