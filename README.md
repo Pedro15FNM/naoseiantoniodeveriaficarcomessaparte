@@ -6,6 +6,8 @@ A base de dados, contendo os animais e suas categorias, é gerenciada por uma Á
 
 No início de cada rodada, um animal é sorteado da Árvore de Afunilamento e suas informações são exibidas. O objetivo do jogador é alcançar o prédio referente à classe desse animal navegando pelas tirolesas (começando pela cabeça da lista), com cuidado para não esgotar a energia de movimentação( tem uma quantidade limitada de movimentos por rodada). Ao alcançar o objetivo, um novo animal de outra classe é sorteado e o ciclo se repete, iniciando uma nova rodada.
 
+Link para vídeo da aplicação em execução: https://drive.google.com/drive/folders/1xJbYSYOvWb6_E_x2WlgvXXpkQzw0AI4J?usp=drive_link
+
 ### PROCESSO DE DESENVOLVIMENTO
 
 O desenvolvimento iniciou com a ideação do jogo logo após a apresentação da proposta do projeto. Em seguida, focamos no polimento da ideia, com debates sobre as características da aplicação, definição do escopo e criação dos primeiros diagramas e documentos de conceito.
