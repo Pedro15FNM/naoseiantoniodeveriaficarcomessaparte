@@ -125,6 +125,7 @@ class GameSession:
         nxt = self.scenario.move(self.current_node, self.current_level, lvl)
         if nxt is None:
             return False
+            
         self.current_node = nxt
         self.moves += 1
         self.energy -= 1
@@ -141,6 +142,14 @@ class GameSession:
         if self._at_target_building():
             self._resolve_combat()
             return
+
+        if self.current_node is not self.scenario.head:
+            if self.current_node.animal_class > self.target.taxonomic_class:
+                self.energy = 0
+                self.state = GameState.GAME_OVER
+                self.message = "Você ultrapassou o prédio do alvo! Game Over."
+                return
+
         if self.energy <= 0:
             self.state = GameState.GAME_OVER
             self.message = "Você ficou sem energia antes de alcançar o alvo. Game Over."
@@ -178,7 +187,7 @@ class GameSession:
     def target_class_label(self) -> str:
         if self.target is None:
             return "—"
-        return self.target.taxonomic_class
+        return f"Alvo: {self.target.common_name} ({self.target.taxonomic_class})"
 
 
 def _assign_building_colors(nodes: list[BuildingNode]) -> None:
